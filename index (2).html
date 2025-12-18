@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - ThS. Đặng Thị Thắm</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #e0f2fe 100%);
+        }
+        .section-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid #0284c7;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background: #0284c7;
+            border-radius: 50%;
+            border: 3px solid #e0f2fe;
+        }
+        .timeline-line {
+            border-left: 2px dashed #0284c7;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .publication-item:hover {
+            transform: translateX(5px);
+            border-left-color: #0369a1;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen scroll-smooth">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold text-sky-700">ThS. Đặng Thị Thắm</h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-sky-600 transition-all duration-300 font-medium">Giới thiệu</a>
+                    <a href="#education" class="nav-link text-gray-700 hover:text-sky-600 transition-all duration-300 font-medium">Đào tạo</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-sky-600 transition-all duration-300 font-medium">Công tác</a>
+                    <a href="#research" class="nav-link text-gray-700 hover:text-sky-600 transition-all duration-300 font-medium">Nghiên cứu</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-sky-600 transition-all duration-300 font-medium">Liên hệ</a>
+                </div>
+                <button id="menuBtn" class="md:hidden text-sky-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="flex flex-col p-4 space-y-3">
+                <a href="#about" class="text-gray-700 hover:text-sky-600">Giới thiệu</a>
+                <a href="#education" class="text-gray-700 hover:text-sky-600">Đào tạo</a>
+                <a href="#experience" class="text-gray-700 hover:text-sky-600">Công tác</a>
+                <a href="#research" class="text-gray-700 hover:text-sky-600">Nghiên cứu</a>
+                <a href="#contact" class="text-gray-700 hover:text-sky-600">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden fade-in">
+                <div class="bg-gradient-to-r from-sky-600 to-sky-400 h-32"></div>
+                <div class="px-8 pb-8 relative">
+                    <div class="flex flex-col md:flex-row items-center md:items-end -mt-16 gap-6">
+                        <div class="w-32 h-32 rounded-full bg-sky-100 border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-user-tie text-5xl text-sky-600"></i>
+                        </div>
+                        <div class="text-center md:text-left pb-4 flex-1">
+                            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">ĐẶNG THỊ THẮM</h1>
+                            <p class="text-sky-600 font-medium text-lg mt-1">Thạc sĩ Thú y</p>
+                            <p class="text-gray-500 mt-1">Bộ môn Thú y - Trường Đại học Cần Thơ</p>
+                        </div>
+                        <div class="hidden md:flex gap-3">
+                            <a href="mailto:dttham@ctu.edu.vn" class="bg-sky-100 text-sky-600 px-4 py-2 rounded-lg hover:bg-sky-200 transition">
+                                <i class="fas fa-envelope mr-2"></i>Email
+                            </a>
+                            <a href="tel:0962436438" class="bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition">
+                                <i class="fas fa-phone mr-2"></i>Liên hệ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 pb-12">
+        <!-- About Section -->
+        <section id="about" class="mb-10 fade-in">
+            <div class="section-card rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-sky-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-id-card text-sky-600"></i>
+                    LÝ LỊCH SƠ LƯỢC
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-user text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Họ và tên</span>
+                                <p class="font-semibold text-gray-800">ĐẶNG THỊ THẮM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-venus text-pink-500 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Giới tính</span>
+                                <p class="font-semibold text-gray-800">Nữ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-calendar-alt text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Ngày sinh</span>
+                                <p class="font-semibold text-gray-800">27/10/1981</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-graduation-cap text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Học vị</span>
+                                <p class="font-semibold text-gray-800">Thạc sĩ <span class="text-gray-500 text-sm">(Năm đạt: 2018)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-briefcase text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Chức danh nghiên cứu</span>
+                                <p class="font-semibold text-gray-800">Nhân viên Phòng Thí nghiệm</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-university text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Đơn vị công tác</span>
+                                <p class="font-semibold text-gray-800">Bộ môn Thú y - ĐH Cần Thơ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Địa chỉ cơ quan</span>
+                                <p class="font-semibold text-gray-800 text-sm">Khu II, Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-sky-50 rounded-lg">
+                            <i class="fas fa-user-tie text-sky-600 w-6"></i>
+                            <div>
+                                <span class="text-gray-500 text-sm">Lãnh đạo cơ quan</span>
+                                <p class="font-semibold text-gray-800">PGS.TS Trần Trung Tính</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-10 fade-in">
+            <div class="section-card rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-sky-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-sky-600"></i>
+                    QUÁ TRÌNH ĐÀO TẠO
+                </h2>
+                <div class="relative pl-8 timeline-line ml-2">
+                    <div class="timeline-item relative pb-8">
+                        <div class="bg-gradient-to-r from-sky-50 to-white p-5 rounded-lg border border-sky-100">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-sky-600 text-white text-sm px-3 py-1 rounded-full">Tốt nghiệp: 2015</span>
+                                <span class="text-sky-700 font-semibold">Đại học</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Trường Đại học Cần Thơ</h3>
+                            <p class="text-gray-600"><i class="fas fa-stethoscope mr-2 text-sky-500"></i>Chuyên ngành: Thú y</p>
+                            <p class="text-gray-500 text-sm mt-1">Hệ đào tạo: Chính quy</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="bg-gradient-to-r from-sky-50 to-white p-5 rounded-lg border border-sky-100">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-sky-600 text-white text-sm px-3 py-1 rounded-full">Tốt nghiệp: 2018</span>
+                                <span class="text-sky-700 font-semibold">Thạc sĩ</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Trường Đại học Cần Thơ</h3>
+                            <p class="text-gray-600"><i class="fas fa-stethoscope mr-2 text-sky-500"></i>Chuyên ngành: Thú y</p>
+                            <p class="text-gray-500 text-sm mt-1">Hệ đào tạo: Chính quy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-10 fade-in">
+            <div class="section-card rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-sky-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-briefcase text-sky-600"></i>
+                    QUÁ TRÌNH CÔNG TÁC CHUYÊN MÔN
+                </h2>
+                <div class="relative pl-8 timeline-line ml-2">
+                    <div class="timeline-item relative pb-8">
+                        <div class="bg-gradient-to-r from-sky-50 to-white p-5 rounded-lg border border-sky-100">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full">2010 - 2015</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Nhân viên</h3>
+                            <p class="text-gray-600">Bệnh xá Thú y, Trường Đại học Cần Thơ</p>
+                            <p class="text-gray-500 text-sm mt-1"><i class="fas fa-map-marker-alt mr-1"></i>Khu II, Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="bg-gradient-to-r from-sky-50 to-white p-5 rounded-lg border border-sky-100">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full">2016 - 2018</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Học Thạc sĩ & Nghiên cứu viên</h3>
+                            <p class="text-gray-600">Bộ môn Thú y, Trường Đại học Cần Thơ</p>
+                            <p class="text-gray-500 text-sm mt-1"><i class="fas fa-map-marker-alt mr-1"></i>Khu II, Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="bg-gradient-to-r from-sky-50 to-white p-5 rounded-lg border border-sky-100">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full">2019 - 2020</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Nghiên cứu viên</h3>
+                            <p class="text-gray-600">Bộ môn Thú y, Trường Đại học Cần Thơ</p>
+                            <p class="text-gray-500 text-sm mt-1"><i class="fas fa-map-marker-alt mr-1"></i>Khu II, Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative">
+                        <div class="bg-gradient-to-r from-green-50 to-white p-5 rounded-lg border border-green-200 ring-2 ring-green-100">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-green-600 text-white text-sm px-3 py-1 rounded-full">2020 - Nay</span>
+                                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Hiện tại</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-lg">Nhân viên PTN (Kỹ sư hạng III)</h3>
+                            <p class="text-gray-600">Bộ môn Thú y, Trường Đại học Cần Thơ</p>
+                            <p class="text-gray-500 text-sm mt-1"><i class="fas fa-map-marker-alt mr-1"></i>Khu II, Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="mb-10 fade-in">
+            <!-- Research Projects -->
+            <div class="section-card rounded-xl shadow-lg p-6 md:p-8 mb-6">
+                <h2 class="text-2xl font-bold text-sky-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-flask text-sky-600"></i>
+                    ĐỀ TÀI NGHIÊN CỨU KHOA HỌC ĐÃ THAM GIA
+                </h2>
+                <div class="space-y-4">
+                    <div class="publication-item p-5 bg-gradient-to-r from-sky-50 to-white rounded-lg border-l-4 border-sky-400 transition-all duration-300">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="bg-amber-500 text-white text-xs px-2 py-1 rounded">Đề tài cấp Tỉnh</span>
+                            <span class="text-gray-500 text-sm">10/2016 - 10/2018</span>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Đã nghiệm thu</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">Nghiên cứu đánh giá tác động gây ô nhiễm nguồn nước và vấy nhiễm vi sinh vật trên sản phẩm gia súc-gia cầm từ các cơ sở giết mổ gia súc - gia cầm tại Trà Vinh</h3>
+                        <p class="text-sky-600 text-sm mt-2"><i class="fas fa-building mr-1"></i> Đề tài KH&CN tỉnh Trà Vinh</p>
+                    </div>
+                    <div class="publication-item p-5 bg-gradient-to-r from-sky-50 to-white rounded-lg border-l-4 border-sky-400 transition-all duration-300">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="bg-amber-500 text-white text-xs px-2 py-1 rounded">Đề tài cấp Tỉnh</span>
+                            <span class="text-gray-500 text-sm">12/2020 - 06/2022</span>
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Đã nghiệm thu</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">Nghiên cứu xác định tác nhân gây bệnh và xây dựng biện pháp phòng trừ hiệu quả bệnh tiêu chảy trên đàn bò nuôi tại tỉnh Bến Tre</h3>
+                        <p class="text-sky-600 text-sm mt-2"><i class="fas fa-building mr-1"></i> Đề tài KHCN tỉnh Bến Tre</p>
+                    </div>
+                    <div class="publication-item p-5 bg-gradient-to-r from-orange-50 to-white rounded-lg border-l-4 border-orange-400 transition-all duration-300">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="bg-amber-500 text-white text-xs px-2 py-1 rounded">Đề tài cấp Tỉnh</span>
+                            <span class="text-gray-500 text-sm">12/2023 - 02/2025</span>
+                            <span class="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded">Đang thực hiện</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">Nghiên cứu đặc điểm dịch tễ, sự lưu hành của virus và đánh giá đáp ứng miễn dịch sau khi tiêm phòng vaccine viêm da nổi cục trên bò tại tỉnh Tiền Giang</h3>
+                        <p class="text-sky-600 text-sm mt-2"><i class="fas fa-building mr-1"></i> Đề tài KHCN tỉnh Tiền Giang</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publications -->
+            <div class="section-card rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-sky-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-file-alt text-sky-600"></i>
+                    CÁC CÔNG TRÌNH NGHIÊN CỨU KHOA HỌC ĐÃ CÔNG BỐ
+                </h2>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-4 rounded-xl text-center">
+                        <p class="text-3xl font-bold">18</p>
+                        <p class="text-sm opacity-90">Công trình</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-sky-500 to-sky-600 text-white p-4 rounded-xl text-center">
+                        <p class="text-3xl font-bold">4</p>
+                        <p class="text-sm opacity-90">Bài Scimago</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-4 rounded-xl text-center">
+                        <p class="text-3xl font-bold">2</p>
+                        <p class="text-sm opacity-90">Q2 Journal</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-500 to-amber-600 text-white p-4 rounded-xl text-center">
+                        <p class="text-3xl font-bold">2</p>
+                        <p class="text-sm opacity-90">Q3 Journal</p>
+                    </div>
+                </div>
+
+                <!-- International Publications -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-sky-700 mb-4 flex items-center gap-2">
+                        <i class="fas fa-globe text-sky-500"></i>
+                        Bài báo Quốc tế (Scimago)
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="publication-item p-5 bg-gradient-to-r from-emerald-50 to-white rounded-lg border-l-4 border-emerald-500 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded font-bold">Q2</span>
+                                <span class="text-gray-500 text-sm">2025</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">"International Journal of Veterinary Science"</h3>
+                            <p class="text-gray-600 text-sm mt-1"><i class="fas fa-users mr-1"></i> Nguyen Thuan Khanh, Trung Thanh Truong, Lam Thanh Nguyen, <strong>Tham Thi Dang</strong>, Vy Le Phuong Nguyen, and Chien Tran Phuoc Nguyen</p>
+                            <p class="text-sky-600 text-sm mt-1"><i class="fas fa-book mr-1"></i> Số 3 (2025): 542-547</p>
+                        </div>
+                        <div class="publication-item p-5 bg-gradient-to-r from-emerald-50 to-white rounded-lg border-l-4 border-emerald-500 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-emerald-600 text-white text-xs px-2 py-1 rounded font-bold">Q2</span>
+                                <span class="text-gray-500 text-sm">2025</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">"Molecular characterization of Hepatozoon canis in dogs from Can Tho in Vietnam"</h3>
+                            <p class="text-gray-600 text-sm mt-1"><i class="fas fa-users mr-1"></i> Tran Thi Thao, Nguyen Thanh Thien, Luu Dac Gia, Kha Thanh Thu, <strong>Dang Thi Tham</strong>, Nguyen Tran Phuoc Chien and Tran Ngoc Bich</p>
+                        </div>
+                        <div class="publication-item p-5 bg-gradient-to-r from-sky-50 to-white rounded-lg border-l-4 border-sky-500 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-sky-600 text-white text-xs px-2 py-1 rounded font-bold">Q3</span>
+                                <span class="text-gray-500 text-sm">2024</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">"Epidemiological characteristics and phylogenetic analysis of lumpy skin disease in cattle in the Mekong Delta of Vietnam"</h3>
+                            <p class="text-gray-600 text-sm mt-1"><i class="fas fa-users mr-1"></i> Trần Ngọc Bích, Võ Tuấn Khải Huyền, Nguyễn Trần Phước Chiến, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-sm mt-1"><i class="fas fa-book mr-1"></i> Số 12-2024, 2284-2292</p>
+                        </div>
+                        <div class="publication-item p-5 bg-gradient-to-r from-sky-50 to-white rounded-lg border-l-4 border-sky-500 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-sky-600 text-white text-xs px-2 py-1 rounded font-bold">Q3</span>
+                                <span class="text-gray-500 text-sm">2024</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800">"Genetic characterization of canine distemper virus from infected dogs in Can Tho City, Mekong Delta, Vietnam"</h3>
+                            <p class="text-gray-600 text-sm mt-1"><i class="fas fa-users mr-1"></i> Trần Thị Thảo, Nguyễn Khánh Thuận, <strong>Đặng Thị Thắm</strong>, Văn Mỹ Tiên, Đặng Thị Mỹ Tú</p>
+                            <p class="text-sky-600 text-sm mt-1"><i class="fas fa-book mr-1"></i> Số 22-2024, 883-894</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Domestic Publications -->
+                <div>
+                    <h3 class="text-lg font-bold text-sky-700 mb-4 flex items-center gap-2">
+                        <i class="fas fa-newspaper text-sky-500"></i>
+                        Bài báo trong nước
+                    </h3>
+                    <div class="space-y-3" id="domesticPubs">
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2019</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát sự thay đổi một số chỉ tiêu huyết học trên chó tiểu đường kết hợp tăng huyết áp"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> <strong>Đặng Thị Thắm</strong>, Trần Thị Thảo, Trần Ngọc Bích, Lê Quang Trung</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 8-2019, 15-21</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2020</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát bệnh viêm tích mủ tử cung trên chó tại quận Ninh Kiều, TP. Cần Thơ"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Trần Ngọc Bích, Lê Bình Minh, Nguyễn Phúc Khánh, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 8-2020, 25-27</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2020</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Đẻ khó trên chó và hiệu quả điều trị tại Bệnh xá Thú y, trường ĐH Cần Thơ"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Trần Ngọc Bích, Nguyễn Phúc Khánh, Trần Thị Thảo, Lê Bình Minh, <strong>Đặng Thị Thắm</strong></p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 8-2020, 30-32</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2020</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát bệnh tích trên phổi, gan, dạ dày và ruột của chó mắc bệnh Ca-rê"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Phạm Diệu Anh, Trần Thị Thảo, Trần Ngọc Bích, Trần Thị Kiều Trinh, <strong>Đặng Thị Thắm</strong>, Văn Mỹ Tiên</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 8-2020, 42-47</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2021</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Bệnh Anaplasmosis trên chó tại PTN Bệnh xá Thú y trường ĐH Cần Thơ"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Nguyễn Thị Hạnh Tiên, Trần Thị Thảo, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Chăn nuôi, Số 270-2021, 95-98</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2022</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát sự thay đổi của một số chỉ tiêu sinh lý, sinh hóa máu trên chó nhiễm Anaplasma platys tại TP. Cần Thơ"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> <strong>Đặng Thị Thắm</strong>, Trần Thị Thảo, Nguyễn Khánh Thuận</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 8-2022, 34-37</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2022</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Tình hình nhiễm Anaplasma platys trên chó tại thành phố Cần Thơ"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> <strong>Đặng Thị Thắm</strong>, Trần Thị Thảo, Nguyễn Khánh Thuận</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Chăn nuôi, Số 283-2022, 66-70</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Toggle Button -->
+                    <button id="togglePubs" class="mt-4 w-full py-3 bg-sky-100 text-sky-700 rounded-lg hover:bg-sky-200 transition font-medium">
+                        <i class="fas fa-chevron-down mr-2"></i>Xem thêm 7 công trình khác
+                    </button>
+                    
+                    <!-- Hidden Publications -->
+                    <div id="morePubs" class="hidden space-y-3 mt-4">
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2023</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Tình hình bệnh dịch tả heo châu Phi tại tỉnh Hậu Giang giai đoạn 2019-2021"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Huỳnh Tuấn Anh, Trần Ngọc Bích, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 3-2023, 25-29</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2023</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Đánh giá các yếu tố nguy cơ lan truyền bệnh dịch tả heo châu Phi tại Hậu Giang năm 2022"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Trần Ngọc Bích, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 3-2023, 30-36</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2023</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Tình hình bệnh viêm da nổi cục trên bò tại tỉnh Tiền Giang"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Võ Tuấn Khải Huyền, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 3-2023, 44-49</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2023</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Nghiên cứu bệnh do Demodex canis gây ra trên chó tại phòng khám thú y Bảo Minh Châu, TP. Cần Thơ"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Lê Ngọc Mẫn, <strong>Đặng Thị Thắm</strong>, và cộng sự</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 3-2023, 87-91</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2023</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát tình hình bệnh tiêu chảy trên mèo do Feline Panleukopenia virus tại TP. Trà Vinh"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Đinh Ngọc Sơn, Trần Thị Thảo, <strong>Đặng Thị Thắm</strong>, Nguyễn Thị Diễm Phương</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 4-2023, 5-9</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2024</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát tình hình bệnh tiêu chảy trên mèo do Feline Panleukopenia virus tại TP. Trà Vinh"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> Đinh Ngọc Sơn, Trần Thị Thảo, <strong>Đặng Thị Thắm</strong>, Nguyễn Thị Diễm Phương</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 4-2024, 1-4</p>
+                        </div>
+                        <div class="publication-item p-4 bg-gradient-to-r from-purple-50 to-white rounded-lg border-l-4 border-purple-400 transition-all duration-300">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Tạp chí</span>
+                                <span class="text-gray-500 text-sm">2024</span>
+                            </div>
+                            <h3 class="font-semibold text-gray-800 text-sm">"Khảo sát tình hình nhiễm và đặc điểm di truyền của Anaplasma platys trên chó"</h3>
+                            <p class="text-gray-600 text-xs mt-1"><i class="fas fa-users mr-1"></i> <strong>Đặng Thị Thắm</strong>, Trần Thị Thảo, Nguyễn Khánh Thuận</p>
+                            <p class="text-sky-600 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i> Tạp chí KHKT Thú y, Số 4-2024, 65-69</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <div class="section-card rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-sky-800 mb-6 flex items-center gap-3">
+                    <i class="fas fa-envelope text-sky-600"></i>
+                    THÔNG TIN LIÊN HỆ
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="text-center p-4 bg-sky-50 rounded-lg">
+                        <i class="fas fa-map-marker-alt text-3xl text-sky-600 mb-3"></i>
+                        <p class="text-gray-700 font-medium">Địa chỉ</p>
+                        <p class="text-gray-600 text-sm">Khu II, Đường 3/2, Q. Ninh Kiều, TP. Cần Thơ</p>
+                    </div>
+                    <div class="text-center p-4 bg-sky-50 rounded-lg">
+                        <i class="fas fa-envelope text-3xl text-sky-600 mb-3"></i>
+                        <p class="text-gray-700 font-medium">Email</p>
+                        <a href="mailto:dttham@ctu.edu.vn" class="text-sky-600 text-sm hover:underline">dttham@ctu.edu.vn</a>
+                    </div>
+                    <div class="text-center p-4 bg-sky-50 rounded-lg">
+                        <i class="fas fa-phone text-3xl text-sky-600 mb-3"></i>
+                        <p class="text-gray-700 font-medium">Di động</p>
+                        <a href="tel:0962436438" class="text-sky-600 text-sm hover:underline">0962 436 438</a>
+                    </div>
+                    <div class="text-center p-4 bg-sky-50 rounded-lg">
+                        <i class="fas fa-building text-3xl text-sky-600 mb-3"></i>
+                        <p class="text-gray-700 font-medium">Cơ quan</p>
+                        <p class="text-sky-600 text-sm">02923 830 594</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-800 text-white py-6 mt-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-sky-200">© 2024 - CV ThS. Đặng Thị Thắm</p>
+            <p class="text-sky-300 text-sm mt-1">Bộ môn Thú y - Trường Đại học Cần Thơ</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Toggle publications
+        const toggleBtn = document.getElementById('togglePubs');
+        const morePubs = document.getElementById('morePubs');
+        let isExpanded = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            morePubs.classList.toggle('hidden');
+            if (isExpanded) {
+                toggleBtn.innerHTML = '<i class="fas fa-chevron-up mr-2"></i>Thu gọn';
+            } else {
+                toggleBtn.innerHTML = '<i class="fas fa-chevron-down mr-2"></i>Xem thêm 7 công trình khác';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Trigger initial animations
+        setTimeout(() => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 100);
+    </script>
+</body>
+</html>
